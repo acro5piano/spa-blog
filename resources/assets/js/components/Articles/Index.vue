@@ -8,8 +8,8 @@
 </template>
 
 <script>
-  import http from '../services/http'
-  import userStore from '../stores/userStore'
+  import http from '../../services/http'
+  import userStore from '../../stores/userStore'
   import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 
   export default {
