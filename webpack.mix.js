@@ -8,6 +8,16 @@ if (process.env.NODE_ENV == 'production') {
      .sass('resources/assets/sass/app.scss', 'public/css');
 }
 
-mix.browserSync('localhost:8000');
+mix.browserSync({
+  proxy: 'web:8000',
+  port: 8001,
+  open: false,
+  notify: {
+    styles: {
+      top: 'auto',
+      bottom: '0',
+    }
+  }
+});
 
 mix.disableNotifications();

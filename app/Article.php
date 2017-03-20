@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Article extends Model
 {
 
-    protected $fillable = ['user_id', 'name', 'is_done'];
+    protected $fillable = ['user_id', 'title', 'content', 'published'];
 
     protected $casts = [
-        'is_done' => 'boolean',
+        'published' => 'boolean',
     ];
 
     public function user()

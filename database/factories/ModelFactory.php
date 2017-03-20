@@ -2,10 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-$factory->define(App\Task::class, function (Faker\Generator $faker) {
+$factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'is_done' => mt_rand(0, 1),
+        'title' => $faker->sentence,
+        'content' => $faker->text,
+        'published' => mt_rand(0, 1),
     ];
 });
 

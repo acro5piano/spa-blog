@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 export default new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/',      component: require('./components/Tasks.vue') },
+    { path: '/',      component: require('./components/Articles/Index.vue') },
     { path: '/login', component: require('./components/Login.vue') },
     { path: '/about', component: require('./components/About.vue') },
   ],
