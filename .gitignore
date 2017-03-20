@@ -1,0 +1,19 @@
+Homestead.json
+Homestead.yaml
+.env
+vendor/
+node_modules/
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+bootstrap/cache/*
+!bootstrap/cache/.gitignore
+.env.*.php
+.env.php
+
+/public/fonts/
+/public/css/app.css
+/public/js/app.js
