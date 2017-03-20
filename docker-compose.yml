@@ -20,6 +20,8 @@ services:
       - ./:/app
     environment:
       TZ: Asia/Tokyo
+    ports:
+      - "3000:3000"
 
   # db:
   #   image: "mysql:5.6"
