@@ -1,7 +1,6 @@
-![](images/capture.png)
+# spa-blog
 
-# laravel-vue-jwtauth-spa-todo-app
-SPA Todo application with authentication using Lavavel 5.4 + Vue.js 2.2 + JWTAuth
+Single Page Blog application with Lavavel 5.4 + Vue.js 2.2 + JWTAuth
 
 # Why SPA?
 
@@ -40,8 +39,8 @@ Login-enable Todo app requires the basic of web technology.  It includes
 # Install
 
 ```
-git clone git@github.com:acro5piano/laravel-vue-jwtauth-spa-todo-app.git
-cd laravel-vue-jwtauth-spa-todo-app
+git clone git@github.com:acro5piano/spa-blog.git
+cd spa-blog
 
 composer install
 yarn install
@@ -55,6 +54,3 @@ php artisan serve
 ```
 
 Go to http://localhost:8000
-
-
-

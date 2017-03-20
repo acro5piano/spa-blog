@@ -7,11 +7,11 @@
 
         <title>Vue TODO</title>
 
-        <!-- TODO: アセットちゃんとやる -->
+        <!-- Heroku 環境では yarn run できないので -->
         @if (env('APP_ENV') === 'production')
-            <link rel="stylesheet" href="dist/css/app.css">
+            <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
         @else
-            <link rel="stylesheet" href="css/app.css">
+            <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @endif
 
         <script>
@@ -24,10 +24,10 @@
         </div>
     </body>
 
-    <!-- TODO: アセットちゃんとやる -->
+    <!-- Heroku 環境では yarn run できないので -->
     @if (env('APP_ENV') === 'production')
-        <script src="dist/js/app.js"></script>
+        <script src="{{ mix('dist/js/app.js') }}"></script>
     @else
-        <script src="js/app.js"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
     @endif
 </html>
