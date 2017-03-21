@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->references('id')->on('users')->unsigned()->index();
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->boolean('published')->default(false);
 
             $table->timestamps();
