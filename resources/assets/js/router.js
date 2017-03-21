@@ -6,9 +6,14 @@ Vue.use(VueRouter)
 export default new VueRouter({
   mode: 'history',
   routes: [
+
     { path: '/',      component: require('./components/Articles/Index.vue') },
     { path: '/login', component: require('./components/Login.vue') },
     { path: '/about', component: require('./components/About.vue') },
+    { path: '/articles/:id', component: require('./components/Articles/Show.vue') },
+    { path: '/articles/:id/edit', component: require('./components/Articles/Edit.vue') },
+    { path: '*', component: require('./components/404.vue') },
+
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

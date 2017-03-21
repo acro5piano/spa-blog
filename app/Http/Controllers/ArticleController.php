@@ -9,7 +9,8 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return Article::all()->keyBy('id');
+        // TODO: content should not be retrived
+        return Article::where('published', true)->paginate();
     }
 
     public function show($id)
@@ -25,7 +26,7 @@ class ArticleController extends Controller
 
     public function update($id, Request $request)
     {
-        $article = Article::find($id)->fill($request->only('is_done'));
+        $article = Article::find($id)->fill($request->only('title', 'content', 'published'));
         $article->save();
         return $article->fresh();
     }

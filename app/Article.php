@@ -17,4 +17,11 @@ class Article extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    protected $appends = ['summary'];
+
+    public function getSummaryAttribute()
+    {
+        return mb_substr($this->content, 0, 100);
+    }
 }
