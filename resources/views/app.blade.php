@@ -9,7 +9,7 @@
 
         <!-- Heroku 環境では yarn run できないので -->
         @if (env('APP_ENV') === 'production')
-            <link rel="stylesheet" href="dist/css/app.css">
+            <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
         @else
             <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @endif
@@ -26,7 +26,7 @@
 
     <!-- Heroku 環境では yarn run できないので -->
     @if (env('APP_ENV') === 'production')
-        <script src="dist/js/app.js"></script>
+        <script src="{{ mix('dist/css/app.js') }}"></script>
     @else
         <script src="{{ mix('js/app.js') }}"></script>
     @endif
