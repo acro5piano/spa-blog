@@ -26,7 +26,7 @@
 
     <!-- Heroku 環境では yarn run できないので -->
     @if (env('APP_ENV') === 'production')
-        <script src="{{ mix('dist/css/app.js') }}"></script>
+        <script src="{{ mix('dist/js/app.js') }}"></script>
     @else
         <script src="{{ mix('js/app.js') }}"></script>
     @endif
