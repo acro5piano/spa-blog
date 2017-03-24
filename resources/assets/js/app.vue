@@ -8,7 +8,7 @@
       <hr>
       <div class="container">
         <a href="https://github.com/acro5piano/spa-blog" target="_blank">
-            <img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="30" height="20">
+            <img src="/images/github.svg" width="30" height="20">
         </a>
       </div>
   </div>

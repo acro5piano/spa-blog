@@ -16,5 +16,6 @@ Route::group(['middleware' => 'api'], function () {
         ]]);
 
         Route::get('me',  'AuthenticateController@getCurrentUser');
+        Route::get('home',  'WelcomeController@index');
     });
 });

@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <router-link to="/" class="navbar-brand">SPA Blog</router-link>
+        <router-link to="/" class="navbar-brand">Cheer</router-link>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,6 +27,7 @@
                <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
+              <li><router-link to="/home">My page</router-link></li>
               <li><a @click="logout()">Log out</a></li>
             </ul>
           </li>

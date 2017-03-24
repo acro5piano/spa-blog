@@ -8,10 +8,15 @@ export default new VueRouter({
   routes: [
 
     { path: '/',      component: require('./components/Articles/Index.vue') },
+    { path: '/home',      component: require('./components/Home.vue') },
     { path: '/login', component: require('./components/Login.vue') },
     { path: '/about', component: require('./components/About.vue') },
+
+    { path: '/articles',     component: require('./components/Articles/Index.vue') },
+    { path: '/articles/new',     component: require('./components/Articles/New.vue') },
     { path: '/articles/:id', component: require('./components/Articles/Show.vue') },
     { path: '/articles/:id/edit', component: require('./components/Articles/Edit.vue') },
+
     { path: '*', component: require('./components/404.vue') },
 
   ],
