@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-      <navbar></navbar>
-      <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
-      <div class="container">
+    <navbar></navbar>
+    <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
+
+    <el-row type="flex" justify="center">
+      <el-col :span="20">
         <router-view></router-view>
-      </div>
-      <hr>
-      <div class="container">
-        <a href="https://github.com/acro5piano/spa-blog" target="_blank">
-            <img src="/images/github.svg" width="30" height="20">
-        </a>
-      </div>
+      </el-col>
+    </el-row>
+
+    <hr>
+    <div class="footer">
+      <el-row type="flex" justify="center">
+        <el-col :span="20">
+          <a href="https://github.com/acro5piano/spa-blog" target="_blank">
+              <img src="/images/github.svg" width="30" height="20">
+          </a>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -38,9 +46,19 @@
 </script>
 
 <style>
-  .loader {
-    position:absolute;
-    left:10px;
-    top:55px;
-  }
+.loader {
+  position:absolute;
+  left:10px;
+  top:70px;
+}
+body {
+  margin: 0;
+  color: #555;
+}
+h1, h2, h3 {
+  font-weight: normal;
+}
+.footer {
+  margin-top: 20px;
+}
 </style>

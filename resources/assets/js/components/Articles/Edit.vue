@@ -1,17 +1,19 @@
 <template>
-  <div style="height:80vh" class="container">
-    <div class="col-md-6">
-      <textarea style="height:80vh; " class="editor form-control" id="content" debounce="100"
+  <el-row>
+    <el-col :span="12">
+      <textarea style="width: 90%; height:80vh; " class="editor" id="content" debounce="100"
         v-model="article.content">
       </textarea>
-    </div>
-    <div class="col-md-6" style="overflow:scroll; max-height:80vh">
-      <div v-html="marked(article.content)"></div>
-    </div>
-    <div class="text-right">
-      <button class="btn btn-primary" @click="updatePost">Update post</button>
-    </div>
-  </div>
+    </el-col>
+    <el-col :span="12">
+      <div class="col-md-6" style="overflow:scroll; height:80vh">
+        <div v-html="marked(article.content)"></div>
+      </div>
+      <div class="text-right">
+        <button class="btn btn-primary" @click="updatePost">Update post</button>
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -31,7 +33,6 @@
     },
     methods: {
       fetchArticle () {
-        console.log(this.article)
         http.get('articles/' + this.$route.params.id, res => {
           this.article = res.data
         })

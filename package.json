@@ -10,14 +10,15 @@
     "axios": "^0.15.2",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.4",
+    "element-ui": "^1.2.5",
     "jquery": "^3.1.0",
+    "keen-ui": "^1.0.0",
     "laravel-mix": "^0.8.8",
     "lodash": "^4.16.2",
+    "marked": "^0.3.6",
     "vue": "^2.0.1",
     "vue-router": "^2.3.0",
-    "vue-spinner": "^1.0.2",
-    "marked": "^0.3.6"
+    "vue-spinner": "^1.0.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

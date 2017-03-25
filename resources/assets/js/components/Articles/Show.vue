@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ article.title }}</h1>
+    <h2>{{ article.title }}</h2>
     <p class="text-right" v-if="userState.authenticated && userState.user.id == article.user_id">
       <router-link :to="`/articles/${article.id}/edit`">Edit</router-link>
     </p>
@@ -30,7 +30,7 @@
           this.article = res.data
         })
       },
-      marked: (text) => { return marked(text) },
+      marked: (text) => { return marked(text || '') },
     }
   }
 </script>
