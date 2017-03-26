@@ -1,20 +1,22 @@
 <template>
   <div>
-    <el-row>
-      <el-card class="box-card">
-        <div slot="header" class="clearfix" @click="goToArticle(article.id)">
-          <el-row>
-            <el-col :span="22">
-              <h1>{{ article.title }}</h1>
-            </el-col>
-            <el-col v-if="userState.authenticated && userState.user.id == article.user_id" :span="2">
-              <el-button size="small" type="primary" icon="edit"
-                         @click="$router.push(`/articles/${article.id}/edit`)">Edit</el-button>
-            </el-col>
-          </el-row>
-        </div>
-        <div class="markdown-body" v-html="marked(article.content)"></div>
-      </el-card>
+    <el-row type="flex" justify="center" class="wrapper">
+      <el-col :span="20">
+        <el-card class="box-card">
+          <div slot="header" class="clearfix" @click="goToArticle(article.id)">
+            <el-row>
+              <el-col :span="22">
+                <h1>{{ article.title }}</h1>
+              </el-col>
+              <el-col v-if="userState.authenticated && userState.user.id == article.user_id" :span="2">
+                <el-button size="small" type="primary" icon="edit"
+                           @click="$router.push(`/articles/${article.id}/edit`)">Edit</el-button>
+              </el-col>
+            </el-row>
+          </div>
+          <div class="markdown-body" v-html="marked(article.content)"></div>
+        </el-card>
+      </el-col>
     </el-row>
   </div>
 </template>

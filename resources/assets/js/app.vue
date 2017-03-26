@@ -3,7 +3,7 @@
     <header-nav/>
     <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
     <el-row type="flex" justify="center" class="wrapper">
-      <el-col :span="20">
+      <el-col :span="23">
         <router-view />
         <footer-nav/>
       </el-col>
