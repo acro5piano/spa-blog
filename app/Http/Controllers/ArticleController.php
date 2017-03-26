@@ -21,7 +21,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $user = \JWTAuth::parseToken()->authenticate();
-        return $user->articles()->create($request->only('name'))->fresh();
+        return $user->articles()->create($request->only('title', 'content', 'published'))->fresh();
     }
 
     public function update($id, Request $request)

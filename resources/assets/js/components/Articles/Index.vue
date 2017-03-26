@@ -73,6 +73,7 @@
 
 <style>
 .box-card {
-  margin-top: 48px;
+  margin-top: 20px;
+  margin-bottom: 48px;
 }
 </style>

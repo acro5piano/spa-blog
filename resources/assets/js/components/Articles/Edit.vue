@@ -1,29 +1,23 @@
 <template>
   <el-row>
-    <el-col :span="12">
-      <textarea style="width: 90%; height:80vh; " class="editor" id="content" debounce="100"
-        v-model="article.content">
-      </textarea>
-    </el-col>
-    <el-col :span="12">
-      <div class="col-md-6" style="overflow:scroll; height:80vh">
-        <div v-html="marked(article.content)"></div>
-      </div>
-      <div class="text-right">
-        <button class="btn btn-primary" @click="updatePost">Update post</button>
-      </div>
-    </el-col>
+    <article-form :content="article.content" :title="article.title"
+      @input-title="text => {article.title = text}"
+      @input-content="text => {article.content = text}"/>
+    <el-button type="primary" @click="updatePost">Update post</el-button>
   </el-row>
 </template>
 
 <script>
   import http from '../../services/http'
   import userStore from '../../stores/userStore'
-  import marked from 'marked'
+  import form from './Form.vue'
 
   export default {
     mounted() {
       this.fetchArticle()
+    },
+    components: {
+      articleForm: form
     },
     data() {
       return {
@@ -37,16 +31,12 @@
           this.article = res.data
         })
       },
-      marked (text) {
-        return marked(text)
-      },
       updatePost () {
         var params = {
           content: this.article.content,
           title: this.article.title,
           published: true,
         }
-
         http.put(`articles/${this.article.id}`, params, () => {
           this.$router.push(`/articles/${this.article.id}`)
         })
@@ -54,5 +44,3 @@
     }
   }
 </script>
-
-

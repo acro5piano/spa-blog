@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <navbar/>
     <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
 
-    <el-row type="flex" justify="center">
+    <el-row type="flex" justify="center" class="wrapper">
       <el-col :span="20">
-        <router-view></router-view>
+        <router-view />
       </el-col>
     </el-row>
 
-    <hr>
     <div class="footer">
+      <hr>
       <el-row type="flex" justify="center">
         <el-col :span="20">
           <a href="https://github.com/acro5piano/spa-blog" target="_blank">
@@ -59,6 +59,11 @@ h1, h2, h3 {
   font-weight: normal;
 }
 .footer {
+  margin-top: 60px;
+}
+.wrapper {
   margin-top: 20px;
 }
+
 </style>
+
