@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href='/fonts/element-icons.ttf' rel='stylesheet' type='text/css'>
-        <link href='/fonts/element-icons.woff' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/element-ui/1.2.5/theme-default/fonts/element-icons.ttf' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/element-ui/1.2.5/theme-default/fonts/element-icons.woff' rel='stylesheet' type='text/css'>
 
         <title>Codecheer</title>
 
