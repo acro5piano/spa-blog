@@ -53,6 +53,7 @@
     },
     methods: {
       // TODO: not to send request when the user is not authenticated
+      // TODO: なぜか2回リクエストが飛んでしまう
       fetchArticles () {
         http.get(`articles?page=${this.currentPageNum}`, res => {
           this.articles = res.data.data

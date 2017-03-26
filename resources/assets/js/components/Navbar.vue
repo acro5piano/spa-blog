@@ -5,12 +5,17 @@
         <el-menu-item index="/">Codecheer</el-menu-item>
         <el-menu-item index="/home">Home</el-menu-item>
       </el-col>
-      <el-col :span="4">
-        <el-submenu index="#" v-if="userState.authenticated">
+      <el-col :span="4" v-if="userState.authenticated">
+        <el-submenu index="#">
           <template index="#" slot="title">{{ userState.user.name }}</template>
           <el-menu-item index="#" @click="logout">Log out</el-menu-item>
         </el-submenu>
-        <el-menu-item index="/login" v-else>Log in</el-menu-item>
+      </el-col>
+      <el-col :span="4" v-else>
+        <el-menu-item index="/login">Log in</el-menu-item>
+        <el-menu-item index="">
+          <a href="/auth/register" target="_blank">Register</a>
+        </el-menu-item>
       </el-col>
     </el-menu>
   </el-row>

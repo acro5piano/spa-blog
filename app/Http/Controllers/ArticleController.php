@@ -7,10 +7,15 @@ use App\Article;
 
 class ArticleController extends Controller
 {
+
+    protected $cast = [
+        'published' => 'boolean',
+    ];
+
     public function index()
     {
-        // TODO: content should not be retrived
-        return Article::where('published', true)->paginate();
+        // TODO: full content should not be retrived, only summary
+        return Article::where('published', true)->orderBy('updated_at', 'desc')->paginate();
     }
 
     public function show($id)

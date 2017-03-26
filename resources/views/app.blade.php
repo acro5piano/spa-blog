@@ -5,9 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- <link href='https://cdnjs.cloudflare.com/ajax/libs/element&#45;ui/1.2.5/theme&#45;default/fonts/element&#45;icons.ttf' rel='stylesheet' type='text/css'> -->
-        <!-- <link href='https://cdnjs.cloudflare.com/ajax/libs/element&#45;ui/1.2.5/theme&#45;default/fonts/element&#45;icons.woff' rel='stylesheet' type='text/css'> -->
-
         <title>Codecheer</title>
 
         <!-- Heroku 環境では yarn run できないので -->

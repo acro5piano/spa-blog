@@ -9,8 +9,10 @@ export default new VueRouter({
 
     { path: '/',      component: require('./components/Articles/Index.vue') },
     { path: '/home',      component: require('./components/Home.vue') },
-    { path: '/login', component: require('./components/Login.vue') },
     { path: '/about', component: require('./components/About.vue') },
+
+    { path: '/login', component: require('./components/Login.vue') },
+    { path: '/register', component: require('./components/Auth/Register.vue') },
 
     { path: '/articles',     component: require('./components/Articles/Index.vue') },
     { path: '/articles/new',     component: require('./components/Articles/New.vue') },

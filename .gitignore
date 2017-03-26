@@ -16,4 +16,5 @@ bootstrap/cache/*
 
 /public/fonts/
 /public/css/app.css
+/public/css/auth.css
 /public/js/app.js
