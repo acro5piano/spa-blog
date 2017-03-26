@@ -28,9 +28,9 @@ It can be installed partialy, but its ecosystem enables us to make simple, light
 Bigger appliction may need state management system such as `vuex`.
 
 
-# Why todo app?
+# Why Blog app?
 
-Login-enable Todo app requires the basic of web technology.  It includes
+Login-enabled Blog app requires the basic of web technology.  It includes
 
 - RESTful routing
 - State Management (legacy session or JWTAuth, OAuth2, etc.)
