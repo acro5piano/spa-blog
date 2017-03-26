@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cheer</title>
+        <title>Codecheer</title>
 
         <!-- Heroku 環境では yarn run できないので -->
         @if (env('APP_ENV') === 'production')

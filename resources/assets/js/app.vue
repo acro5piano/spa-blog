@@ -1,24 +1,13 @@
 <template>
   <div id="app">
-    <navbar/>
+    <header-nav/>
     <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
-
     <el-row type="flex" justify="center" class="wrapper">
       <el-col :span="20">
         <router-view />
+        <footer-nav/>
       </el-col>
     </el-row>
-
-    <div class="footer">
-      <hr>
-      <el-row type="flex" justify="center">
-        <el-col :span="20">
-          <a href="https://github.com/acro5piano/spa-blog" target="_blank">
-              <img src="/images/github.svg" width="30" height="20">
-          </a>
-        </el-col>
-      </el-row>
-    </div>
   </div>
 </template>
 
@@ -33,7 +22,8 @@
     },
     components: {
       ClipLoader,
-      navbar: require('./components/Navbar.vue')
+      headerNav: require('./components/Navbar.vue'),
+      footerNav: require('./components/Footer.vue'),
     },
     data () {
       return {
@@ -45,7 +35,7 @@
 
 </script>
 
-<style>
+<style lang="scss">
 .loader {
   position:absolute;
   left:10px;
@@ -53,16 +43,20 @@
 }
 body {
   margin: 0;
-  color: #555;
+  color: #666;
+  background: #f5f8fa;
+  line-height: 1.5em;
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  line-height: 1.5em;
 }
-.footer {
-  margin-top: 60px;
-}
+
 .wrapper {
   margin-top: 20px;
+}
+a {
+  text-decoration: none;
 }
 
 </style>
