@@ -1,6 +1,13 @@
 # spa-blog
 
-Single Page Blog application with Lavavel 5.4 + Vue.js 2.2 + JWTAuth
+Single Page Blog application with
+
+- [Lavavel 5.4](https://laravel.com/)
+- [Vue.js 2.2](https://vuejs.org)
+- [Element.io](http://element.eleme.io/#/en-US)
+- [JWTAuth](https://github.com/tymondesigns/jwt-auth)
+
+DEMO: https://presto-unicon.herokuapp.com/
 
 # Why SPA?
 
@@ -22,8 +29,9 @@ And laravel-mix build all asset files.
 Vue.js is one of modern JavaScript framework.
 It can be installed partialy, but its ecosystem enables us to make simple, lightweight, elegant SPA.
 
-- vue-router
 - axios
+- vue-router
+- vue-spinner
 
 Bigger appliction may need state management system such as `vuex`.
 
