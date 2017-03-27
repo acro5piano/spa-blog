@@ -38,8 +38,8 @@
 </template>
 
 <script>
-  import userStore from '../stores/userStore'
-  import http from '../services/http'
+  import userStore from '../../stores/userStore'
+  import http from '../../services/http'
 
   export default {
     mounted () {

@@ -3,36 +3,46 @@
     <el-col :span="14" type="flex" justify="center">
       <el-card class="box-card">
         <div slot="header" class="clearfix" @click="goToArticle(article.id)">
-          Login
-        </div>
-        <div class="alert alert-danger" role="alert" v-if="show_alert">
-          {{ alert_message }}
+          Register
         </div>
 
         <div class="form-group">
-          <el-input id="email" type="text" v-model="email" @keyup.enter.native="login" required autofocus>
+          <el-alert
+            v-if="showAlert"
+            :title="alertMessage"
+            type="warning"
+            :closable="false"
+            show-icon/>
+        </div>
+
+        <div class="form-group">
+          <el-input id="name" type="text" v-model="name" @keyup.enter.native="register" required autofocus>
             <template slot="prepend">Email</template>
           </el-input>
         </div>
 
+        <div class="form-group">
+          <el-input id="email" type="email" v-model="email" @keyup.enter.native="register" required autofocus>
+            <template slot="prepend">Email</template>
+          </el-input>
+        </div>
 
         <div class="form-group">
-          <el-input id="password" type="password" v-model="password" @keyup.enter.native="login" required autofocus>
+          <el-input id="password" type="password" v-model="password" @keyup.enter.native="register" required autofocus>
             <template slot="prepend">Password</template>
           </el-input>
         </div>
 
         <div class="form-group">
-          <input type="checkbox" name="remember"> Remember Me
+          <el-input id="password_confirmation" type="password" v-model="password_confirmation" @keyup.enter.native="register" required autofocus>
+            <template slot="prepend">Password Confirm</template>
+          </el-input>
         </div>
 
         <div class="form-group">
-          <el-button type="primary" @click="login">Login</el-button>
+          <el-button type="primary" @click="register">Register</el-button>
         </div>
 
-        <!-- <a class="btn btn&#45;link" href="#"> -->
-        <!--   Forgot Your Password? -->
-        <!-- </a> -->
       </el-card>
     </el-col>
   </el-row>
@@ -44,32 +54,39 @@
 
   export default {
     mounted () {
-      this.fetchUsers()
     },
     data() {
       return {
+        name: 'Kazuya Gosho',
         email: 'test@example.com',
         password: 'secret',
-        users: [],
-        show_alert: false,
-        alert_message: '',
+        password_confirmation: 'secret',
+        showAlert: false,
+        alertMessage: '',
       }
     },
     methods: {
       register () {
-        userStore.login(this.email, this.password, res => {
-          this.$router.push('/')
+        var params = {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+          password_confirmation: this.password_confirmation,
+        }
+
+        http.post('register', params, res => {
+          this.$router.push('/home')
+          userStore.login(this.email, this.password, res => {
+            this.$router.push('/')
+          }, error => {
+            this.showAlert = true
+            this.alertMessage = 'Wrong email or password.'
+          })
         }, error => {
-          this.show_alert = true
-          this.alert_message = 'Wrong email or password.'
+          this.showAlert = true
+          this.alertMessage = 'Wrong email or password.'
         })
       },
-      fetchUsers () {
-        http.get('users', res => {
-          this.users = res.data.users
-          this.email = this.users[0].email
-        })
-      }
     }
   }
 

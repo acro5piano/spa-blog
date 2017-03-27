@@ -13,9 +13,7 @@
       </el-col>
       <el-col :span="4" v-else>
         <el-menu-item index="/login">Log in</el-menu-item>
-        <el-menu-item index="">
-          <a href="/auth/register" target="_blank">Register</a>
-        </el-menu-item>
+        <el-menu-item index="/register">Register</el-menu-item>
       </el-col>
     </el-menu>
   </el-row>
