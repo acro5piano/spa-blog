@@ -9,7 +9,7 @@ export default {
 
   login (email, password, successCb = null, errorCb = null) {
     var login_param = {email: email, password: password}
-    http.post('authenticate', login_param, res => {
+    http.post('login', login_param, res => {
       this.state.user = res.data.user
       this.state.authenticated = true
       successCb()
