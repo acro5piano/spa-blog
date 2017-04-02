@@ -14,7 +14,10 @@ bootstrap/cache/*
 .env.*.php
 .env.php
 
+# minified files
 /public/fonts/
-/public/css/app.css
-/public/css/auth.css
-/public/js/app.js
+/public/css
+/public/js
+
+# editor
+tags

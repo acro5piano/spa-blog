@@ -19,11 +19,8 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
-        <env name="DB_DRIVER" value="mysql"/>
-        <env name="DB_HOST" value="127.0.0.1"/>
-        <env name="DB_USERNAME" value="root"/>
-        <env name="DB_DATABASE" value="circle_test"/>
-        <env name="DB_PASSWORD" value=""/>
+        <env name="DB_DRIVER" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
         <env name="APP_HOST" value="http://localhost"/>
         <env name="MAIL_HOST" value="127.0.0.1"/>
     </php>

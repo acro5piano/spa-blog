@@ -7,12 +7,7 @@
 
         <title>Codecheer</title>
 
-        <!-- Heroku 環境では yarn run できないので -->
-        @if (env('APP_ENV') === 'production')
-            <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
-        @else
-            <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        @endif
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <script>
             window.Laravel = {};
@@ -24,10 +19,5 @@
         </div>
     </body>
 
-    <!-- Heroku 環境では yarn run できないので -->
-    @if (env('APP_ENV') === 'production')
-        <script src="{{ mix('dist/js/app.js') }}"></script>
-    @else
-        <script src="{{ mix('js/app.js') }}"></script>
-    @endif
+    <script src="{{ mix('js/app.js') }}"></script>
 </html>
