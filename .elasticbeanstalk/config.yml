@@ -1,0 +1,13 @@
+branch-defaults:
+  master:
+    environment: codecheer-env
+global:
+  default_platform: arn:aws:elasticbeanstalk:ap-northeast-1::platform/PHP 7.0 running
+    on 64bit Amazon Linux/2.3.0
+  default_region: ap-northeast-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
+  workspace_type: Application

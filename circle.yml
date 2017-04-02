@@ -1,0 +1,29 @@
+machine:
+  timezone: Asia/Tokyo
+  php:
+    version: 7.0.4
+  node:
+    version: 7.4.0
+  environment:
+    APP_ENV: testing
+test:
+  override:
+    - cp .env.example .env
+    - php artisan key:generate
+    - php artisan optimize
+    - npm run production
+    - vendor/bin/phpunit --configuration phpunit-circle.xml
+  post:
+    - mkdir -p $CIRCLE_ARTIFACTS
+    - mv storage/coverage/* $CIRCLE_ARTIFACTS
+deployment:
+  develop:
+    branch: develop
+    commands:
+      - bash ./ci/setup-eb.sh
+      - bash ./ci/deploy-circle.sh dev
+  production:
+    branch: master
+    commands:
+      - bash ./ci/setup-eb.sh
+      - bash ./ci/deploy-circle.sh production
