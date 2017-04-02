@@ -4,8 +4,12 @@ machine:
     version: 7.0.4
   node:
     version: 7.4.0
-  environment:
-    APP_ENV: testing
+dependencies:
+  override:
+    - yarn install
+    - composer install
+  pre:
+    npm install coffeescript
 test:
   override:
     - cp .env.example .env
