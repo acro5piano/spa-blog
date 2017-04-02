@@ -1,9 +1,13 @@
 branch-defaults:
   master:
-    environment: codecheer-env
+    environment: Default-Environment
+environment-defaults:
+  Default-Environment:
+    branch: null
+    repository: null
 global:
-  default_platform: arn:aws:elasticbeanstalk:ap-northeast-1::platform/PHP 7.0 running
-    on 64bit Amazon Linux/2.3.0
+  application_name: My First Elastic Beanstalk Application
+  default_ec2_keyname: kazuya
   default_region: ap-northeast-1
   instance_profile: null
   platform_name: null

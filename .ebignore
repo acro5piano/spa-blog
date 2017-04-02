@@ -1,0 +1,15 @@
+bin
+docker
+.elasticbeanstalk
+.env.*
+*.bak
+.git
+node_modules
+tests
+tags
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+!.elasticbeanstalk/config.yml
