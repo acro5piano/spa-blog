@@ -8,8 +8,6 @@ dependencies:
   override:
     - yarn install
     - composer install
-  pre:
-    npm install coffeescript
 test:
   override:
     - cp .env.example .env
