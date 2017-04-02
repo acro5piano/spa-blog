@@ -19,13 +19,7 @@ test:
     - mkdir -p $CIRCLE_ARTIFACTS
     - mv storage/coverage/* $CIRCLE_ARTIFACTS
 deployment:
-  develop:
-    branch: develop
-    commands:
-      - bash ./ci/setup-eb.sh
-      - bash ./ci/deploy-circle.sh dev
   production:
     branch: master
     commands:
-      - bash ./ci/setup-eb.sh
-      - bash ./ci/deploy-circle.sh production
+      - bash ./ci/deploy.sh
