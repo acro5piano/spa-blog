@@ -44,7 +44,7 @@ PUSHER_APP_ID=
 PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
 
-DB_CONNECTION=sqlite
+DB_CONNECTION=mysql
 EOF
 
 npm run production
