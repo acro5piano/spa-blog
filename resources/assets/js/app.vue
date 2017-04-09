@@ -1,19 +1,28 @@
 <template>
   <div id="app">
     <header-nav/>
+
     <clip-loader v-if="loading" :size="size" class="loader"></clip-loader>
-    <el-row type="flex" justify="center" class="wrapper">
+
+    <div v-if="$route.path === '/' && ! userState.authenticated">
+      <router-view />
+      <footer-nav/>
+    </div>
+
+    <el-row type="flex" justify="center" class="wrapper" v-else>
       <el-col :span="23">
         <router-view />
         <footer-nav/>
       </el-col>
     </el-row>
+
   </div>
 </template>
 
 <script>
   import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
   import event from './utils/event'
+  import userStore from './stores/userStore'
 
   export default {
     created () {
@@ -29,6 +38,7 @@
       return {
         loading: false,
         size: '15px',
+        userState: userStore.state,
       }
     },
   }

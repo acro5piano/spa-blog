@@ -7,7 +7,7 @@ export default new VueRouter({
   mode: 'history',
   routes: [
 
-    { path: '/',      component: require('./components/Articles/Index.vue') },
+    { path: '/',      component: require('./components/Top.vue') },
     { path: '/home',      component: require('./components/Home.vue') },
     { path: '/about', component: require('./components/About.vue') },
 

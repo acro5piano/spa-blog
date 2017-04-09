@@ -16,25 +16,34 @@
         </div>
 
         <div class="form-group">
-          <el-input id="name" type="text" v-model="name" @keyup.enter.native="register" required autofocus>
+          <el-input id="name" type="text" v-model="name" @keyup.enter.native="register"
+            placeholder="Your name"
+            required autofocus>
+            <template slot="prepend">Name</template>
+          </el-input>
+        </div>
+
+        <div class="form-group">
+          <el-input id="email" type="email" required autofocus
+            placeholder="you@example.com"
+            v-model="email" @keyup.enter.native="register">
             <template slot="prepend">Email</template>
           </el-input>
         </div>
 
         <div class="form-group">
-          <el-input id="email" type="email" v-model="email" @keyup.enter.native="register" required autofocus>
-            <template slot="prepend">Email</template>
-          </el-input>
-        </div>
-
-        <div class="form-group">
-          <el-input id="password" type="password" v-model="password" @keyup.enter.native="register" required autofocus>
+          <el-input id="password" type="password" required autofocus
+            placeholder="Password"
+            v-model="password" @keyup.enter.native="register">
             <template slot="prepend">Password</template>
           </el-input>
         </div>
 
         <div class="form-group">
-          <el-input id="password_confirmation" type="password" v-model="password_confirmation" @keyup.enter.native="register" required autofocus>
+          <el-input id="password_confirmation" type="password" v-model="password_confirmation" @keyup.enter.native="register"
+            placeholder="Retype password..."
+            required autofocus
+            >
             <template slot="prepend">Password Confirm</template>
           </el-input>
         </div>
@@ -57,10 +66,10 @@
     },
     data() {
       return {
-        name: 'Kazuya Gosho',
-        email: 'test@example.com',
-        password: 'secret',
-        password_confirmation: 'secret',
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
         showAlert: false,
         alertMessage: '',
       }
