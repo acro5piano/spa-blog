@@ -1,9 +1,5 @@
 const { mix } = require('laravel-mix')
 
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-
 mix.webpackConfig({
   resolve: {
     extensions: ['.js', '.vue', '.json'],
