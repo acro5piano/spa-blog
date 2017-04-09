@@ -31,8 +31,8 @@
 </template>
 
 <script>
-  import http from '../../services/http'
-  import userStore from '../../stores/userStore'
+  import http from '@/services/http'
+  import userStore from '@/stores/userStore'
   import pagination from './Pagination.vue'
 
   export default {

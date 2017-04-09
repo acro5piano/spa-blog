@@ -22,9 +22,9 @@
 </template>
 
 <script>
-  import http from '../../services/http'
-  import userStore from '../../stores/userStore'
-  import markdown from '../../utils/markdown'
+  import http from '@/services/http'
+  import userStore from '@/stores/userStore'
+  import markdown from '@/utils/markdown'
 
   export default {
     mounted() {

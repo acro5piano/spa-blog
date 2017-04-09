@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import markdown from '../../utils/markdown'
+  import markdown from '@/utils/markdown'
 
   export default {
     props: ['title', 'content'],

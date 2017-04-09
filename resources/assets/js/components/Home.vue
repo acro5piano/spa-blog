@@ -16,8 +16,8 @@
 </template>
 
 <script>
-  import http from '../services/http'
-  import userStore from '../stores/userStore'
+  import http from '@/services/http'
+  import userStore from '@/stores/userStore'
 
   export default {
     mounted() {

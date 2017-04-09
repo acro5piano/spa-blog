@@ -31,8 +31,8 @@
     },
     components: {
       ClipLoader,
-      headerNav: require('./components/Navbar.vue'),
-      footerNav: require('./components/Footer.vue'),
+      headerNav: require('./components/Layouts/Navbar.vue'),
+      footerNav: require('./components/Layouts/Footer.vue'),
     },
     data () {
       return {

@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import userStore from '../stores/userStore'
+  import userStore from '@/stores/userStore'
 
   export default {
     data (){
