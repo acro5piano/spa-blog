@@ -1,9 +1,9 @@
 <template>
   <el-row>
-    <article-form :content="article.content" :title="article.title"
-      @input-title="text => {article.title = text}"
-      @input-content="text => {article.content = text}"/>
-    <el-button type="primary" @click="updatePost">Update post</el-button>
+    <el-input type="text" class="editor" id="title" debounce="100"
+      v-model="article.title"></el-input>
+    <article-form v-model="article.content"></article-form>
+    <el-button type="primary" @click="updatePost">Create post</el-button>
   </el-row>
 </template>
 

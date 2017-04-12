@@ -1,14 +1,10 @@
 <template>
-  <div style="height:80vh" class="container">
-    <h2>New item</h2>
-    <el-input
-      type="text"
-      class="editor" id="title" debounce="100"
+  <el-row>
+    <el-input type="text" class="editor" id="title" debounce="100"
       v-model="article.title"></el-input>
-    <el-input
     <article-form v-model="article.content"></article-form>
     <el-button type="primary" @click="createPost">Create post</el-button>
-  </div>
+  </el-row>
 </template>
 
 <script>
