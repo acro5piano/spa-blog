@@ -3,7 +3,8 @@
     <el-menu theme="dark" :default-active="'/'" :router="true" mode="horizontal" @select="handleSelect">
       <el-col :span="20">
         <el-menu-item index="/">Codecheer</el-menu-item>
-        <el-menu-item index="/home">Home</el-menu-item>
+        <el-menu-item index="/home" v-if="userState.authenticated">Home</el-menu-item>
+        <el-menu-item index="/articles/new">New item</el-menu-item>
       </el-col>
       <el-col :span="4" v-if="userState.authenticated">
         <el-submenu index="#">
