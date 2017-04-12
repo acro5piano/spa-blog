@@ -1,9 +1,12 @@
 <template>
   <div style="height:80vh" class="container">
     <h2>New item</h2>
-    <article-form :content="article.content" :title="article.title"
-      @input-title="text => {article.title = text}"
-      @input-content="text => {article.content = text}"/>
+    <el-input
+      type="text"
+      class="editor" id="title" debounce="100"
+      v-model="article.title"></el-input>
+    <el-input
+    <article-form v-model="article.content"></article-form>
     <el-button type="primary" @click="createPost">Create post</el-button>
   </div>
 </template>
@@ -11,16 +14,18 @@
 <script>
   import http from '@/services/http'
   import userStore from '@/stores/userStore'
-  import form from './Form.vue'
 
   export default {
     components: {
-      articleForm: form
+      articleForm: require('./Form')
     },
     data() {
       return {
         userState: userStore.state,
-        article: {},
+        article: {
+          title: '',
+          content: '',
+        },
       }
     },
     methods: {

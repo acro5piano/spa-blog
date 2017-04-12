@@ -16,9 +16,9 @@
 
 <style>
 .footer {
-  margin: 60px 0 60px 0;
+  margin: 120px 0 60px 0;
 }
 .footer-content {
-  margin: 60px 0 60px 0;
+  margin: 120px 0 60px 0;
 }
 </style>
