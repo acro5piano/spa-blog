@@ -4,13 +4,22 @@
     "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "eslint --ext .js,.vue resources/assets/js"
   },
   "devDependencies": {
     "axios": "^0.15.2",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.4",
     "element-ui": "^1.2.5",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-plugin-html": "^2.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "highlight.js": "^9.10.0",
     "jquery": "^3.1.0",
     "laravel-mix": "^0.8.8",
