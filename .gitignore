@@ -21,3 +21,4 @@ bootstrap/cache/*
 
 # editor
 tags
+public/mix-manifest.json
