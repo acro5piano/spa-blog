@@ -12,7 +12,6 @@ export default new VueRouter({
     { path: '/about', component: require('./components/About.vue') },
 
     { path: '/login', component: require('./components/Auth/Login.vue') },
-    { path: '/register', component: require('./components/Auth/Register.vue') },
 
     { path: '/articles',     component: require('./components/Articles/Index.vue') },
     { path: '/articles/new',     component: require('./components/Articles/New.vue') },
