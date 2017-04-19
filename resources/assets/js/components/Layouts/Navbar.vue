@@ -4,7 +4,7 @@
       <el-col :span="20">
         <el-menu-item index="/">Codecheer</el-menu-item>
         <el-menu-item index="/home" v-if="userState.authenticated">Home</el-menu-item>
-        <el-menu-item index="/articles/new">New item</el-menu-item>
+        <el-menu-item index="/articles/new" v-if="userState.authenticated">New item</el-menu-item>
       </el-col>
       <el-col :span="4" v-if="userState.authenticated">
         <el-submenu index="#">
@@ -14,7 +14,6 @@
       </el-col>
       <el-col :span="4" v-else>
         <el-menu-item index="/login">Log in</el-menu-item>
-        <el-menu-item index="/register">Register</el-menu-item>
       </el-col>
     </el-menu>
   </el-row>
@@ -32,7 +31,7 @@
     methods: {
       logout() {
         userStore.logout( () => {
-          this.$router.push('/login')
+          this.$router.push('/')
         })
       },
       handleSelect() {

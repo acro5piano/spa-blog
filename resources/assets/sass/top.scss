@@ -11,28 +11,62 @@ a {
   text-decoration: none;
 }
 
-.clear {
-  clear: left;
+header {
+  height:80px;
+  width: 100%;
+  background-color: rgba(34,49,52,0.9);
+  opacity: 0.5;
+  position :fixed;
+  z-index: 5;
+}
+
+.header-left {
+  position: fixed;
+}
+
+.header-left a{
+ display: block;
+ height:80px;
+}
+
+.logo {
+  padding-left:10px;
+  padding-top: 10px;
+  width: 240px;
+  height:80px;
+  z-index: 10;
 }
 
 .container {
-  max-width: 1170px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  display:inline-block;
+}
+
+
+
+.header-right {
+  float: right;
+  margin-top:30px;
+  margin-right:30px;
+}
+
+.header-right a{
+  color:white;
 }
 
 .top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(/images/sunsetwithboy.jpg);
+  padding: 150px 0 100px 0;
+  background-image: url(sunsetwithboy.png);
   background-size: cover;
   color: white;
-  text-align: left;
+  height:750px;
 }
 
 .top-wrapper h1 {
   opacity: 0.7;
-  font-size: 45px;
+  font-size: 40px;
   letter-spacing: 5px;
 }
 
@@ -42,163 +76,38 @@ a {
   margin-bottom: 40px;
 }
 
-.btn-wrapper {
-  text-align: center;
+.left-content{
+  float:left;
+  text-align: left;
+  padding-left:20px;
 }
 
-.btn-wrapper p {
-  margin-bottom: 20px;
+.right-content{
+  float:right;
+  padding-right: 100px;
 }
 
-.signup {
-  background-color: #239b76;
-  border-radius: 20px;
+ul li {
+    list-style: none;
 }
 
-.facebook {
-  background-color: #3b5998;
-  border-radius: 20px;
+.contact-submit{
+  margin-left:20px;
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
+.right-content input{
+  height:30px;
+  width:300px;
+  margin-bottom: 10px;
+  font-size:10px;
+  letter-spacing: 2px;
 }
 
-.btn:hover {
-  opacity: 1;
+h2 {
+  opacity: 0.7;
+  font-size: 40px;
 }
 
-.fa {
-  margin-right: 5px;
-}
-
-.logo {
-  width: 200px;
-  height:100px;
-}
-
-header {
-  height:65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  opacity: 0.5;
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: white;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display:none;
-
-}
-
-.lesson-wrapper {
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 44%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 200px;
-  height:100px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+.clear{
+  clear:both;
 }
