@@ -60,19 +60,45 @@
 
 <script>
   import userStore from '@/stores/userStore'
+  import http from '@/services/http'
 
   export default {
     components: {
       articles: require('./Articles/Index.vue')
     },
-    mounted() {
-    },
     data() {
       return {
         userState: userStore.state,
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
+        showAlert: false,
+        alertMessage: '',
       }
     },
     methods: {
+      register () {
+        var params = {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+          password_confirmation: this.password_confirmation,
+        }
+
+        http.post('register', params, res => {
+          this.$router.push('/home')
+          userStore.login(this.email, this.password, res => {
+            this.$router.push('/')
+          }, error => {
+            this.showAlert = true
+            this.alertMessage = 'Wrong email or password.'
+          })
+        }, error => {
+          this.showAlert = true
+          this.alertMessage = 'Wrong email or password.'
+        })
+      },
     }
   }
 </script>
