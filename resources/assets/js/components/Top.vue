@@ -80,5 +80,10 @@
 <style>
 .top-wrapper {
   min-height: 100vh;
+  padding: 150px 0 100px 0;
+  background-image: url(/images/sunsetwithboy.png);
+  background-size: cover;
+  color: white;
+  height:750px;
 }
 </style>
