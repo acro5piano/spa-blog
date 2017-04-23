@@ -17,12 +17,12 @@
 
       <el-col :span="10" v-if="! userState.authenticated">
         <el-menu-item index="#">
-          <el-input id="email" type="text" v-model="email" @keyup.enter.native="login" size="small" required autofocus>
+          <el-input id="email" type="text" v-model="email" placeholder="you@example.com" @keyup.enter.native="login" size="small" required autofocus>
           </el-input>
         </el-menu-item>
 
         <el-menu-item index="#">
-          <el-input id="password" type="password" v-model="password" @keyup.enter.native="login" size="small" required autofocus>
+          <el-input id="password" type="password" v-model="password" placeholder="Password" @keyup.enter.native="login" size="small" required autofocus>
           </el-input>
         </el-menu-item>
 
