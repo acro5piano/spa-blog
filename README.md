@@ -44,21 +44,27 @@ Login-enabled Blog app requires the basic of web technology.  It includes
 - State Management (legacy session or JWTAuth, OAuth2, etc.)
 - Database Migration
 
-# Install
+# Development
 
-```
+Docker and Docker Compose is recommended.
+
+```bash
 git clone git@github.com:acro5piano/spa-blog.git
 cd spa-blog
 
-composer install
-yarn install
 
-yarn run watch
+# Dependencies
+docker-compose build
+docker-compose run --rm web composer install
+docker-compose run --rm nodejs yarn install
+
+# Config
 cp .env.example .env
-php argisan key:generate
-php artisan migrate
-php artisan seed
-php artisan serve
+docker-compose exec web php argisan key:generate
+docker-compose exec web php artisan migrate --seed
+
+# Start
+docker-compose up
 ```
 
 Go to http://localhost:8000
