@@ -22,7 +22,7 @@ APP_ENV=production
 APP_KEY=
 APP_DEBUG=false
 APP_LOG_LEVEL=debug
-APP_URL=http://localhost
+APP_URL=$APP_URL
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
