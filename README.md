@@ -7,7 +7,7 @@ Single Page Blog application with
 - [Element.io](http://element.eleme.io/#/en-US)
 - [JWTAuth](https://github.com/tymondesigns/jwt-auth)
 
-DEMO: https://presto-unicon.herokuapp.com/
+DEMO: http://www.codecheer.me/
 
 # Why SPA?
 
