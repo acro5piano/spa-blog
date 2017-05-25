@@ -4,6 +4,7 @@
 
       <el-col :span="14">
         <el-menu-item index="/">Codecheer</el-menu-item>
+        <el-menu-item index="/articles">Articles</el-menu-item>
         <el-menu-item index="/home" v-if="userState.authenticated">Home</el-menu-item>
         <el-menu-item index="/articles/new" v-if="userState.authenticated">New item</el-menu-item>
       </el-col>
